@@ -4,6 +4,8 @@ const blogs = require("./blog/blogs-stack.js");
 
 const authEvents = require("./auth/events.js");
 
+const onCreatePage = require('./page/pagesEvents.js')
+
 // use require with a reference to bundle the file and use it in this file
 // const example = require('./example')
 
@@ -13,4 +15,7 @@ const authEvents = require("./auth/events.js");
 $(() => {
   blogApi();
   authEvents.addHandler();
+  $('#createPage').on('click', onCreatePage)
 });
+
+  
