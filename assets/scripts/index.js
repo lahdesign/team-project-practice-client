@@ -8,6 +8,6 @@ const blogApi = require("./blog/blogs-Api.js");
 // require('./example')
 
 $(() => {
-  // your JS code goes here
-  blogApi();
-});
+  blogApi()
+  authEvents.addHandler()
+})
