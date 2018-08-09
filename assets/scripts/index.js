@@ -1,4 +1,5 @@
-'use strict'
+"use strict";
+const blogApi = require("./blog/blogs-Api.js");
 
 // use require with a reference to bundle the file and use it in this file
 // const example = require('./example')
@@ -8,4 +9,5 @@
 
 $(() => {
   // your JS code goes here
-})
+  blogApi();
+});
