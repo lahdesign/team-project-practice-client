@@ -28,6 +28,12 @@
           aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
+              <!--Buttons for authentication, picked up by click handlers in assets/scripts/events.js-->
+       <button id='sign-up-button'>Sign Up</button>
+       <button id='sign-in-button'>Sign In</button>
+       <button id='change-password-button'>Change Password</button>
+       <!--sign out does not currently display error when cannot connect to server-->
+       <button id='sign-out-button'>Sign Out</button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
@@ -85,6 +91,49 @@
   </header>
   <!-- Main navigation -->
   <!--Main Navigation-->
+
+     <!--Modals for the authentication. In future want to see if I can make DRYer; handlebars?-->
+     <div id = 'sign-up-modal' class = 'modal'>
+      <div class = 'modal-content'>
+        <span class = "close">&times;</span>
+        <form id = 'sign-up'>
+          <input type = 'text' name = 'credentials[email]' placeholder='Email'>
+          <input type = 'password' name='credentials[password]' placeholder='Password'>
+          <input type = 'password' name='credentials[password_confirmation]' placeholder='Confirm Password'>
+          <input type = 'submit' value='Sign Up'>
+        </form>
+        <p class = 'message'></p>
+      </div>
+    </div>  
+
+    <div id = 'sign-in-modal' class = 'modal'>
+      <div class = 'modal-content'>
+        <span class = "close">&times;</span>
+        <form id = 'sign-in'>
+          <input type = 'text' name = 'credentials[email]' placeholder='Email'>
+          <input type = 'password' name='credentials[password]' placeholder='Password'>
+          <input type = 'submit' value='Sign In'>
+        </form>
+        <p class = 'message'></p>
+      </div>
+    </div>  
+
+    <!-- <form id = 'sign-out'>
+      <input type = 'submit' value='Sign Out'>
+    </form> -->
+
+    <div id = 'change-password-modal' class = 'modal'>
+        <div class = 'modal-content'>
+        <span class = "close">&times;</span>
+        <form id = 'change-password'>
+          <input type = 'password' name = 'passwords[old]' placeholder='Old Password'>
+          <input type = 'password' name = 'passwords[new]' placeholder='New Password'>
+          <input type = 'submit' value='Change Password'>
+        </form>
+        <p class = 'message'></p>
+      </div>
+    </div> 
+
 
   <!--Main layout-->
   <main class="mt-5 pt-5">
