@@ -8,7 +8,7 @@
 require("./assets/scripts/index.js");
 // require("./assets/styles/templateassets/js/jquery-3.3.1.min.js");
 // require("./assets/styles/templateassets/js/popper.min.js");
-// // require("./assets/styles/template-assets/js/bootstrap.min.js");
+//require("./assets/styles/template-assets/js/bootstrap.min.js");
 require("./assets/styles/templateassets/js/mdb.min.js");
 // new WOW().init();
 
