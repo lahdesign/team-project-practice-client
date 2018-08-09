@@ -1,7 +1,8 @@
 "use strict";
 const blogApi = require("./blog/blogs-Api.js");
+const blogs = require("./blog/blogs-stack.js");
 
-const authEvents = require('./auth/events.js')
+const authEvents = require("./auth/events.js");
 
 // use require with a reference to bundle the file and use it in this file
 // const example = require('./example')
@@ -10,6 +11,6 @@ const authEvents = require('./auth/events.js')
 // require('./example')
 
 $(() => {
-  blogApi()
-  authEvents.addHandler()
-})
+  blogApi();
+  authEvents.addHandler();
+});
