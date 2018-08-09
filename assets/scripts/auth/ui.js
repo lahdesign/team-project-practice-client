@@ -4,7 +4,6 @@
 // was taken from Tic Tac Toe, which was taken from the lessons
 
 const store = require('../store.js')
-const quizEvents = require('../quizzes/events.js')
 
 const mismatchedPasswords = function () {
   document.getElementById('sign-up').reset()
@@ -39,12 +38,6 @@ const signInSuccess = function (data) {
   // used later to authenticate user w token
   store.user = data.user
   setTimeout(closeModal, 1000)
-  // displays flashcard only after modal closes
-  setTimeout(() => $('#flashcard').css('display', 'block'), 1100)
-  // launches first question (actually runs before the timeouts are done)
-  // may decide to replace this 
-  // with a selection to pick the kinds of flashcards to learn
-  quizEvents.onNewQuestion()
 }
 
 const signInFailure = function (err) {
@@ -69,8 +62,7 @@ const signOutSuccess = function (data) {
   // think it's okay b/c pretty obvious user signed out.
   $('.message').text('Signed out successfully')
   $('#sign-up-button, #sign-in-button').css('display', 'inline')
-  $('#sign-out-button, #change-password-button, #flashcard').css('display', 'none')
-  $('#question, #display-answer').text('')
+  $('#sign-out-button, #change-password-button').css('display', 'none')
   store.user = null
 }
 
